@@ -1,0 +1,285 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+}
+
+.top-bar {
+    height: 4em;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px #eaeaea;
+    position: fixed;
+    width: 100%;
+}
+
+.div2 {
+    background-color: #f4f5f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.image-text {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.image-text-two {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.overall-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+}
+
+.overall-text p {
+    margin: 0em;
+}
+
+.overall-text p:last-child {
+    margin-top: 1em;
+}
+
+* {
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #fafafa;
+}
+
+.portal {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.portal form {
+    width: min(100%, 29.375em);
+    display: grid;
+    gap: 1.2rem;
+    border-radius: 10px;
+}
+
+.title h1 {
+    font-size: 1rem;
+
+    margin-bottom: 0em;
+    text-align: left;
+    color: #603392;
+}
+
+.title p {
+    color: #2b2d4a;
+    font-size: 2rem;
+    margin-bottom: 0.7em;
+}
+
+input,
+button {
+    font: inherit;
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+    border-radius: 5px;
+}
+
+#google-signin {
+    padding: 0.8em;
+    display: flex;
+    justify-content: center;
+    color: #3e82f7;
+    font-weight: bold;
+    gap: 0.5rem;
+    background: #fff;
+    border-color: #3e82f7;
+    cursor: pointer;
+}
+
+#facebook-signin {
+    padding: 0.8em;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #3b5998;
+    font-weight: bold;
+    background: #fff;
+    border-color: #3b5998;
+    cursor: pointer;
+}
+
+span {
+    color: #2b2d4a;
+    font-weight: bold;
+    display: flex;
+    margin-top: 2.4em;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    background: white;
+    border-color: #6e6e89;
+    padding: 1.4375em 0.9375em 0.4375em;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.input-field label {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    left: 15px;
+    top: 16px;
+    transition: 0.3s ease;
+}
+
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label {
+    font-size: 0.85rem;
+    top: 5px;
+}
+
+.input-field input:focus {
+    border: 2px solid #603392;
+}
+
+.input-field input:focus ~ label {
+    color: #603392;
+}
+
+#show-hide-pass {
+    width: 1.5rem;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#forgot-pass {
+    text-decoration: none;
+    color: #603392;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+#signin {
+    background: #603392;
+    color: #fff;
+    padding: 0.9em;
+    cursor: pointer;
+    width: 30%;
+}
+
+#signup {
+    font-size: 0.9rem;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+#signup a {
+    text-decoration: none;
+    color: #773eb5;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3em;
+}
+
+.arrow {
+    margin-right: 0.4em;
+    transform: rotate(180deg);
+    width: 3%;
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        display: block;
+        margin: 0em auto;
+    }
+
+    .signintext {
+        margin-bottom: 1em;
+    }
+
+    .portal {
+        width: 100%;
+    }
+
+    .input-field {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .image-container {
+        margin-bottom: 4em;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button {
+        width: 100%;
+        padding: 0.8em;
+        box-sizing: border-box;
+    }
+
+    #signin,
+    #google-signin,
+    #facebook-signin {
+        margin-bottom: 1em;
+    }
+
+    #signin {
+        width: 100%;
+    }
+
+    #google-signin img,
+    #facebook-signin img {
+        height: 1.1em;
+        margin-right: 0.1em;
+    }
+
+    #forgot-pass,
+    #signup {
+        display: block;
+        margin-bottom: 1em;
+    }
+    .portal form {
+        width: min(100%, 29.375em);
+        display: grid;
+        gap: 0.6rem;
+        border-radius: 10px;
+    }
+
+    span {
+        color: #2b2d4a;
+        font-weight: bold;
+        display: flex;
+        margin-top: 1em;
+    }
+
+    #signup a {
+        color: #007bff;
+    }
+
+    .div2 {
+        display: none;
+    }
+}
